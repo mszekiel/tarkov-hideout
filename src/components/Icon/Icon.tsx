@@ -1,13 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { getIcon } from "../../services/tarkovMarket";
 import Loader from "../Loader/Loader";
 
-export interface IconProps {
-  icon?: string;
-}
-
-interface ImageProps {
+interface IconProps {
   src: string;
   name?: string;
 }
@@ -60,34 +55,12 @@ const ImageContainer = styled.div<ImageContainerProps>`
   }
 `;
 
-const Image: React.FC<ImageProps> = ({ name, src }) => {
-  return (
-    <ImageContainer name={name}>
-      <img src={src} />
-    </ImageContainer>
-  );
-};
-
-const Icon: React.FC<IconProps> = ({ icon }) => {
-  const [iconImage, setIconImage] = React.useState({ name: "", url: "" });
-
-  React.useEffect(() => {
-    if (!iconImage.url) {
-      getIcon(icon).then(res => {
-        setIconImage(res);
-      });
-    }
-  }, [iconImage]);
-
+const Icon: React.FC<IconProps> = ({ name, src }) => {
   return (
     <Container>
-      <React.Suspense fallback={Loader}>
-        {iconImage.url ? (
-          <Image src={iconImage.url} name={iconImage.name} />
-        ) : (
-          <Loader />
-        )}
-      </React.Suspense>
+      <ImageContainer name={name}>
+        <img src={src} />
+      </ImageContainer>
     </Container>
   );
 };

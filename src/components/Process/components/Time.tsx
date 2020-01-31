@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Arrow from "../../Arrow/Arrow";
 
 export interface ArrowProps {
-  completion?: string;
+  time?: Date;
 }
 
 const TimeContainer = styled.div`
@@ -17,11 +17,24 @@ const CompletionTime = styled.div`
   text-shadow: 0 0 2px ${props => props.theme.colors.primary};
 `;
 
-const Time: React.FC<ArrowProps> = ({ completion }) => {
+const getTimeString = (time: Date) => {
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+  const parseValue = (value: number) => ("0" + value).slice(-2);
+
+  return [
+    hours ? `${parseValue(hours)}:` : "",
+    minutes ? `${parseValue(minutes)}:` : "",
+    parseValue(seconds)
+  ].join("");
+};
+
+const Time: React.FC<ArrowProps> = ({ time }) => {
   return (
     <TimeContainer>
       <Arrow />
-      <CompletionTime>{completion}</CompletionTime>
+      <CompletionTime>{getTimeString(time)}</CompletionTime>
     </TimeContainer>
   );
 };

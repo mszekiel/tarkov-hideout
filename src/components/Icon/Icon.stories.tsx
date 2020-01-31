@@ -1,8 +1,11 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Icon from "./Icon";
+import { query } from "../../services/tarkovMarket";
 
-storiesOf("Icon", module)
-  .add("Empty", () => <Icon />)
-  .add("With Key", () => <Icon icon="West wing room 203 key" />)
-  .add("With Mosin", () => <Icon icon="Infantry Mosin" />);
+query("key").then(items => {
+  storiesOf("Icon", module)
+    .add("Empty", () => <Icon src={items[0].icon} />)
+    .add("With Key", () => <Icon src={items[1].icon} />)
+    .add("With other Key", () => <Icon src={items[2].icon} />);
+});
