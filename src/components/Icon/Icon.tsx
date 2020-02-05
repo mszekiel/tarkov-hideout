@@ -55,11 +55,11 @@ const ImageContainer = styled.div<ImageContainerProps>`
   }
 `;
 
-const Icon: React.FC<IconProps> = ({ name, src }) => {
+const Icon: React.FC<IconProps> = ({ name = "Loading", src }) => {
   return (
     <Container>
       <ImageContainer name={name}>
-        <img src={src} />
+        {src ? <img src={src} /> : <Loader />}
       </ImageContainer>
     </Container>
   );

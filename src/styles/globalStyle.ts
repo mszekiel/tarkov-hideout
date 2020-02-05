@@ -6,6 +6,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    background-color: ${props => props.theme.colors.background}
 }
 
 html {

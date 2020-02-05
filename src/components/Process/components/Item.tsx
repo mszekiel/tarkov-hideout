@@ -41,7 +41,6 @@ const Item: React.FC<ItemProps> = ({ name, amount }) => {
   React.useEffect(() => {
     if (!item) {
       query(name).then(items => {
-        console.log(items);
         setItem(items[0]);
       });
     }
@@ -50,7 +49,7 @@ const Item: React.FC<ItemProps> = ({ name, amount }) => {
   return (
     <ItemContainer>
       <IconContainer>
-        {item && <Icon name={item.name} src={item.icon} />}
+        <Icon name={item?.name} src={item?.icon} />
       </IconContainer>
       <Amount>{amount}</Amount>
     </ItemContainer>

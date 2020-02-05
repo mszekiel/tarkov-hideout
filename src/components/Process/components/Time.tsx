@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import Arrow from "../../Arrow/Arrow";
+import ItemDate from "../../../utils/itemDate";
 
-export interface ArrowProps {
-  time?: Date;
+export interface TimeProps {
+  time: ItemDate;
 }
 
 const TimeContainer = styled.div`
@@ -17,24 +18,12 @@ const CompletionTime = styled.div`
   text-shadow: 0 0 2px ${props => props.theme.colors.primary};
 `;
 
-const getTimeString = (time: Date) => {
-  const hours = time.getHours();
-  const minutes = time.getMinutes();
-  const seconds = time.getSeconds();
-  const parseValue = (value: number) => ("0" + value).slice(-2);
 
-  return [
-    hours ? `${parseValue(hours)}:` : "",
-    minutes ? `${parseValue(minutes)}:` : "",
-    parseValue(seconds)
-  ].join("");
-};
-
-const Time: React.FC<ArrowProps> = ({ time }) => {
+const Time: React.FC<TimeProps> = ({ time }) => {
   return (
     <TimeContainer>
       <Arrow />
-      <CompletionTime>{getTimeString(time)}</CompletionTime>
+      <CompletionTime>{time.getItemString()}</CompletionTime>
     </TimeContainer>
   );
 };

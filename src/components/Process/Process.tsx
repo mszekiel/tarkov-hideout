@@ -3,6 +3,7 @@ import Input from "./components/Input";
 import Item from "./components/Item";
 import styled from "styled-components";
 import Time from "./components/Time";
+import ItemDate from "../../utils/itemDate";
 // import Output from "./components/Output";
 
 const ProcessContainer = styled.div`
@@ -31,20 +32,15 @@ const FlexContainer = styled.div`
   align-items: center;
 `;
 
+interface ItemData {
+  name: string;
+  amount: number;
+}
+
 export interface ProcessProps {
-  input: [
-    {
-      name: string;
-      amount: number;
-    }
-  ];
-  time: Date;
-  output: [
-    {
-      name: string;
-      amount: number;
-    }
-  ];
+  input: ItemData[];
+  time: ItemDate;
+  output: ItemData[];
 }
 
 class Process extends React.Component<ProcessProps> {
@@ -63,11 +59,11 @@ class Process extends React.Component<ProcessProps> {
       <ProcessContainer>
         <FlexContainer>
           {input.map(item => (
-            <Item {...item} />
+            <Item key={item.name} {...item} />
           ))}
           <Time time={time} />
           {output.map(item => (
-            <Item {...item} />
+            <Item key={item.name} {...item} />
           ))}
         </FlexContainer>
       </ProcessContainer>

@@ -3,7 +3,10 @@
 const API_URL = "https://tarkov-market.ru/api/v1";
 const API_KEY = "A2Ga3au3N7xnHYVu";
 
-export interface TarkovItem {
+export class TarkovItem {
+  constructor(object: TarkovItem) {
+    object && Object.assign(this, object);
+  }
   name: string;
   price: number;
   slots: number;
@@ -12,6 +15,10 @@ export interface TarkovItem {
   icon: string;
   link: string;
   reference: string;
+
+  getIcon = async () => {
+    return this.icon;
+  };
 }
 
 export const query: (item: string) => Promise<TarkovItem[]> = item => {
@@ -21,5 +28,6 @@ export const query: (item: string) => Promise<TarkovItem[]> = item => {
     }
   })
     .then(res => res.json())
-    .then(items => <TarkovItem[]>items);
+    .then(items => <[]>items)
+    .then(items => items.map(item => new TarkovItem(item)));
 };
