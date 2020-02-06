@@ -4,7 +4,6 @@ import Item from "./components/Item";
 import styled from "styled-components";
 import Time from "./components/Time";
 import ItemDate from "../../utils/itemDate";
-// import Output from "./components/Output";
 
 const ProcessContainer = styled.div`
   display: inline-block;
