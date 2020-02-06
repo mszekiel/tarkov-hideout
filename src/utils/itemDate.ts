@@ -1,10 +1,9 @@
 class ItemDate {
   private date: Date;
-
   constructor(hours: number, minutes: number, seconds: number) {
     this.date = new Date(0, 0, 0, hours, minutes, seconds, 0);
   }
-  
+
   getItemString() {
     const hours = this.date.getHours();
     const minutes = this.date.getMinutes();
@@ -20,4 +19,3 @@ class ItemDate {
 }
 
 export default ItemDate;
- 

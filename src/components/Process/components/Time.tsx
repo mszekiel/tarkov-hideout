@@ -13,6 +13,7 @@ const TimeContainer = styled.div`
 
 const CompletionTime = styled.div`
   font-family: ${props => props.theme.font};
+  letter-spacing: 1.4px;
   text-align: center;
   color: ${props => props.theme.colors.primary};
   text-shadow: 0 0 2px ${props => props.theme.colors.primary};

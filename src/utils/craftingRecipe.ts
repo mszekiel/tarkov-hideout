@@ -1,16 +1,28 @@
-import { TarkovItem } from "../services/tarkovMarket";
+import { TarkovItem } from "./tarkovItem";
 import ItemDate from "./itemDate";
 
-type CraftingItem = {
+export interface CraftingItem {
   item: TarkovItem;
   amount: number;
-};
+}
 
-export interface CraftingRecipe {
-  facility: string;
+export interface Facility {
+  name: string;
+  level: number;
+}
+
+export interface ItemData {
+  name: string;
+  amount: number;
+}
+
+export class CraftingRecipe {
+  facility: Facility;
+  profit: number;
   crafting: {
-    input: CraftingItem[];
-    time: ItemDate;
-    output: CraftingItem[];
+    input: ItemData[];
+    time: [number, number, number];
+    output: ItemData[];
   };
 }
+ 

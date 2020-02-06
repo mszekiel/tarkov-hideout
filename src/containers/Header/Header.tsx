@@ -11,7 +11,8 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 0 100px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Logo = styled.div`

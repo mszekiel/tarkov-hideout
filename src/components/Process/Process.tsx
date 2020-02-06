@@ -4,6 +4,7 @@ import Item from "./components/Item";
 import styled from "styled-components";
 import Time from "./components/Time";
 import ItemDate from "../../utils/itemDate";
+import { ItemData } from "../../utils/craftingRecipe";
 
 const ProcessContainer = styled.div`
   display: inline-block;
@@ -11,30 +12,12 @@ const ProcessContainer = styled.div`
   padding: 10px;
   position: relative;
   user-select: none;
-
-  /* &:before {
-    content: "";
-    position: absolute;
-    transform: translate(-25%, -25%);
-    width: 150%;
-    height: 150%;
-    background-image: radial-gradient(
-      ellipse closest-side,
-      black,
-      rgba(0, 0, 0, 0)
-    );
-  } */
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-
-interface ItemData {
-  name: string;
-  amount: number;
-}
 
 export interface ProcessProps {
   input: ItemData[];
@@ -54,13 +37,14 @@ class Process extends React.Component<ProcessProps> {
 
   render() {
     const { input, time, output } = this.props;
+    console.log(this.props);
     return (
       <ProcessContainer>
         <FlexContainer>
           {input.map(item => (
             <Item key={item.name} {...item} />
           ))}
-          <Time time={time} />
+          <Time key={'asd'} time={time} />
           {output.map(item => (
             <Item key={item.name} {...item} />
           ))}
