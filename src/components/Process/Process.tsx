@@ -37,7 +37,6 @@ class Process extends React.Component<ProcessProps> {
 
   render() {
     const { input, time, output } = this.props;
-    console.log(this.props);
     return (
       <ProcessContainer>
         <FlexContainer>

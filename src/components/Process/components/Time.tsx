@@ -9,6 +9,7 @@ export interface TimeProps {
 
 const TimeContainer = styled.div`
   padding: 0 20px;
+  width: 80px;
 `;
 
 const CompletionTime = styled.div`
