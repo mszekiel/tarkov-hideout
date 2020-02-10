@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 3000",
     "build": "webpack -p",
     "storybook": "start-storybook -p 9001 -c .storybook watch-css -s ./public/"
   },
