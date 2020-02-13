@@ -1,8 +1,8 @@
 import * as React from "react";
 import Icon from "../../Icon/Icon";
 import styled from "styled-components";
-import { query } from "../../../services/tarkovMarket";
-import { TarkovItem } from "../../../utils/tarkovItem";
+import { query } from "../../../services/hideout";
+import { TarkovItem } from "../../../types/tarkovItem";
 import Loader from "../../Loader/Loader";
 
 const IconContainer = styled.div`

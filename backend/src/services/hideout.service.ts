@@ -1,4 +1,4 @@
-import { ItemProvider } from 'src/providers/ItemProvider';
+import { ItemProvider as HideoutProvider } from 'src/providers/item.provider';
 import { Item } from 'src/types/Item';
 import { Injectable } from '@nestjs/common';
 import { recipes, uniqueNames } from 'src/assets/RecipeList';
@@ -9,10 +9,10 @@ import { classToPlain } from 'class-transformer';
 import { RecipeFacade } from 'src/assets/RecipeFacade';
 
 @Injectable()
-export class ItemService {
-  provider: ItemProvider;
+export class HideoutService {
+  provider: HideoutProvider;
 
-  constructor(provider: ItemProvider) {
+  constructor(provider: HideoutProvider) {
     this.provider = provider;
   }
 

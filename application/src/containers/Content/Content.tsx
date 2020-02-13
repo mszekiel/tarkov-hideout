@@ -1,10 +1,10 @@
 import * as React from "react";
-import { CraftingRecipe } from "../../utils/craftingRecipe";
-import { getRecipes } from "../../services/tarkovMarket";
+import { CraftingRecipe } from "../../types/Recipe";
+import { getRecipes } from "../../services/hideout";
 import Table from "../../components/Table";
 import Loader from "../../components/Loader/Loader";
 import Process from "../../components/Process";
-import ItemDate from "../../utils/itemDate";
+import ItemDate from "../../types/ItemDate";
 
 const Content = () => {
   const [recipes, setRecipes] = React.useState<CraftingRecipe[]>([]);

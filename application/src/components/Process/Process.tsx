@@ -3,8 +3,8 @@ import Input from "./components/Input";
 import Item from "./components/Item";
 import styled from "styled-components";
 import Time from "./components/Time";
-import ItemDate from "../../utils/itemDate";
-import { ItemData } from "../../utils/craftingRecipe";
+import ItemDate from "../../types/ItemDate";
+import { ItemData } from "../../types/Recipe";
 
 const ProcessContainer = styled.div`
   display: inline-block;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Process from "./index";
 import { storiesOf } from "@storybook/react";
-import ItemDate from "../../utils/itemDate";
+import ItemDate from "../../types/ItemDate";
 
 storiesOf("Process", module)
   .add("One to one", () => (

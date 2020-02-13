@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import Arrow from "../../Arrow/Arrow";
-import ItemDate from "../../../utils/itemDate";
+import ItemDate from "../../../types/ItemDate";
 
 export interface TimeProps {
   time: ItemDate;
