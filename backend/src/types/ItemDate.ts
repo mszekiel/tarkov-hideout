@@ -1,4 +1,4 @@
-class ItemDate {
+export class ItemDate {
   private date: Date;
   constructor([hours = 0, minutes = 0, seconds = 0]: number[]) {
     this.date = new Date(0, 0, 0, hours, minutes, seconds, 0);
@@ -17,5 +17,3 @@ class ItemDate {
     ].join('');
   }
 }
-
-export default ItemDate;

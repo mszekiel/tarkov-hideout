@@ -1,7 +1,7 @@
 import { Expose, Type } from 'class-transformer';
 import { Item } from 'src/types/Item';
 import { RecipeInterface } from 'src/types/Recipe';
-import ItemDate from 'src/types/ItemDate';
+import { ItemDate } from 'src/types/ItemDate';
 import { ItemFacade } from './ItemFacade';
 import { Resource } from 'src/types/Resource';
 

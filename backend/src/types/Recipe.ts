@@ -1,5 +1,5 @@
 import { Item, ItemInterface } from './Item';
-import ItemDate from './ItemDate';
+import {ItemDate} from './ItemDate';
 import { Resource } from './Resource';
 import { OutputItem } from './OutputItem';
 

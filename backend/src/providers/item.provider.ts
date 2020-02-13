@@ -13,7 +13,7 @@ const api = axios.create({
 });
 
 @Injectable()
-export class ItemProvider {
+export class HideoutProvider {
   async fetch(name: string) {
     return api
       .request<ItemInterface[]>({
