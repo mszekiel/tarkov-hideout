@@ -3,7 +3,7 @@ import { HideoutController } from './controllers/hideout.controller';
 import { HideoutProvider } from './providers/item.provider';
 import { HideoutService } from './services/hideout.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { join, resolve } from 'path';
+import { join } from 'path';
 
 @Module({
   imports: [

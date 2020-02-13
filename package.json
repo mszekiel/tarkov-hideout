@@ -2,7 +2,7 @@
   "name": "tarkov-calculator",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "npm i --prefix application && npm i --prefix backend && npm run build --prefix application"
+    "postinstall": "npm i --prefix application && npm i --prefix backend && cd application; npm run build"
   },
   "dependencies": {
     "@nestjs/cli": "^6.13.2"
