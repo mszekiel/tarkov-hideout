@@ -32,16 +32,16 @@ const Amount = styled.div`
 
 export interface ItemProps {
   name: string;
+  icon: string;
   amount: number;
+  price: number;
 }
 
-const Item: React.FC<ItemProps> = ({ name, amount }) => {
-  const [resource, setResource] = React.useState<Resource>();
-
+const Item: React.FC<ItemProps> = ({ name, amount, icon, price }) => {
   return (
     <ItemContainer>
       <IconContainer>
-        <Icon name={resource?.name} src={resource?.icon} />
+        <Icon name={name} src={icon} />
       </IconContainer>
       <Amount>{amount}</Amount>
     </ItemContainer>

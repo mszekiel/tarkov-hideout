@@ -8,5 +8,5 @@ export class WithPagination {
 
   @IsOptional()
   @IsNumber()
-  end: number = Infinity;
+  limit: number = 10;
 }
