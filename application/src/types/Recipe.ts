@@ -1,10 +1,20 @@
-import ItemDate from "./ItemDate";
+import { ItemDate } from "./ItemDate";
 import { Resource } from "./Resource";
 
-export interface Recipe {
+export class Recipe {
   facility: string;
   input: Resource[];
   output: Resource[];
   time: ItemDate;
   profit: number;
+
+  constructor(data: {
+    facility: string;
+    input: Resource[];
+    output: Resource[];
+    time: ItemDate;
+    profit: number;
+  }) {
+    return Object.assign(this, data);
+  }
 }

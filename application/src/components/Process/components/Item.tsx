@@ -1,9 +1,8 @@
 import * as React from "react";
 import Icon from "../../Icon/Icon";
 import styled from "styled-components";
-import { query } from "../../../services/hideout";
-import { TarkovItem } from "../../../types/tarkovItem";
 import Loader from "../../Loader/Loader";
+import { Resource } from "../../../types/Resource";
 
 const IconContainer = styled.div`
   border: 1px solid black;
@@ -37,20 +36,12 @@ export interface ItemProps {
 }
 
 const Item: React.FC<ItemProps> = ({ name, amount }) => {
-  const [item, setItem] = React.useState<TarkovItem>();
-
-  React.useEffect(() => {
-    if (!item) {
-      query(name).then(items => {
-        setItem(items[0]);
-      });
-    }
-  }, [item]);
+  const [resource, setResource] = React.useState<Resource>();
 
   return (
     <ItemContainer>
       <IconContainer>
-        <Icon name={item?.name} src={item?.icon} />
+        <Icon name={resource?.name} src={resource?.icon} />
       </IconContainer>
       <Amount>{amount}</Amount>
     </ItemContainer>

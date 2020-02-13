@@ -1,13 +1,11 @@
 import * as React from "react";
-import { CraftingRecipe } from "../../types/Recipe";
+import { Recipe } from "../../types/Recipe";
 import { getRecipes } from "../../services/hideout";
 import Table from "../../components/Table";
-import Loader from "../../components/Loader/Loader";
 import Process from "../../components/Process";
-import ItemDate from "../../types/ItemDate";
 
 const Content = () => {
-  const [recipes, setRecipes] = React.useState<CraftingRecipe[]>([]);
+  const [recipes, setRecipes] = React.useState<Recipe[]>([]);
 
   React.useEffect(() => {
     if (recipes.length <= 0) {
@@ -20,12 +18,12 @@ const Content = () => {
   const listRecipes = () => {
     return recipes.map((recipe, index) => (
       <Table.Body.Row key={index}>
-        <Table.Body.Item>{recipe.facility.name}</Table.Body.Item>
+        <Table.Body.Item>{recipe.facility}</Table.Body.Item>
         <Table.Body.Item>
           <Process
-            input={recipe.crafting.input}
-            time={new ItemDate(...recipe.crafting.time)}
-            output={recipe.crafting.output}
+            input={recipe.input}
+            time={recipe.time}
+            output={recipe.output}
           />
         </Table.Body.Item>
         <Table.Body.Item>
