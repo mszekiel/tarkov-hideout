@@ -3,12 +3,12 @@ import { HideoutController } from './controllers/hideout.controller';
 import { HideoutProvider } from './providers/item.provider';
 import { HideoutService } from './services/hideout.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: resolve('../../application/dist'),
+      rootPath: join(__dirname, '..', '..', 'application', 'dist'),
     }),
   ],
   controllers: [HideoutController],
