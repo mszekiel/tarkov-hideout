@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 3000",
+    "start": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8085",
     "start:prod": "node ./server/index.js",
     "build": "webpack -p",
     "build:prod": "npm run build",
@@ -20,6 +20,7 @@
     "@storybook/addon-knobs": "^5.3.9",
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.3.9",
+    "@types/debounce": "^1.2.0",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^4.4.2",
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "copy-webpack-plugin": "^5.1.1",
+    "debounce": "^1.2.0",
     "memoizee": "^0.4.14",
     "mobx": "^5.15.4",
     "mobx-react": "^6.1.4",

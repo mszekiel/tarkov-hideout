@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 import { recipes, uniqueNames } from 'src/assets/RecipeList';
 import { WithPagination } from 'src/types/WithPagination';
 import { Recipe } from 'src/types/Recipe';
-import { ItemDate } from 'src/types/ItemDate';
 import { classToPlain } from 'class-transformer';
 import { RecipeFacade } from 'src/assets/RecipeFacade';
 
@@ -15,12 +14,13 @@ export class HideoutService {
     this.provider = provider;
   }
 
-  async getRecipes(request: WithPagination) {
+  async getRecipes(query: WithPagination) {
     const items = await Promise.all(
       uniqueNames.map(async name => await this.provider.fetch(name)),
     );
 
     return recipes
+      .slice(query.start, query.limit + query.start)
       .map(
         recipe =>
           new Recipe({
@@ -37,6 +37,5 @@ export class HideoutService {
           }),
       )
       .map(recipe => classToPlain(new RecipeFacade(recipe)));
-    // .splice(request.start, request.limit + request.start);
   }
 }

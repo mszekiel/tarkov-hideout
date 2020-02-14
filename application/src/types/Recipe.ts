@@ -1,8 +1,13 @@
 import { ItemDate } from "./ItemDate";
 import { Resource } from "./Resource";
 
+export interface Facility {
+  name: string;
+  level: number;
+}
+
 export class Recipe {
-  facility: string;
+  facility: Facility;
   input: Resource[];
   output: Resource[];
   time: ItemDate;

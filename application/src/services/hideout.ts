@@ -6,8 +6,8 @@ const API_URL =
     ? "http://localhost:2137"
     : "https://tarkov-calculator.herokuapp.com";
 
-export function getRecipes(skip: number = 0) {
-  return fetch(`${API_URL}/hideout/recipes`)
+export function getRecipes(start: number = 0) {
+  return fetch(`${API_URL}/hideout/recipes?start=${start}`)
     .then(response => response.json())
     .then(result =>
       result.map((recipe: any) => {

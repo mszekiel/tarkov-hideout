@@ -1,7 +1,12 @@
 import { Item, ItemInterface } from './Item';
-import {ItemDate} from './ItemDate';
+import { ItemDate } from './ItemDate';
 import { Resource } from './Resource';
 import { OutputItem } from './OutputItem';
+
+export interface Facility {
+  name: string;
+  level: number;
+}
 
 export class Recipe implements RecipeInterface {
   facility: string;
@@ -11,7 +16,7 @@ export class Recipe implements RecipeInterface {
   profit: number;
 
   constructor(data: {
-    facility: string;
+    facility: Facility;
     input: OutputItem[];
     output: OutputItem[];
     time: ItemDate;

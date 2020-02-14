@@ -1,7 +1,7 @@
 export const recipes = [
   /** Booze generator */
   {
-    facility: 'Booze generator',
+    facility: { name: 'Booze generator', level: 1 },
     input: [
       { name: 'Pack of sugar', amount: 2 },
       { name: 'Purified water', amount: 1 },
@@ -11,7 +11,7 @@ export const recipes = [
   },
   /** Intelligence Center */
   {
-    facility: 'Intelligence Center',
+    facility: { name: 'Intelligence Center', level: 1 },
     input: [
       { name: 'Broken GPhone', amount: 1 },
       { name: 'Broken GPhone X', amount: 1 },
@@ -22,19 +22,19 @@ export const recipes = [
   },
   /** Lavatory */
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [{ name: 'Printer paper', amount: 1 }],
     output: [{ name: 'Toilet paper', amount: 2 }],
     time: [0, 26, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [{ name: 'GP-5 gasmask', amount: 1 }],
     output: [{ name: 'Air filter for gas mask', amount: 1 }],
     time: [0, 2, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Zibbo lighter', amount: 6 },
       { name: 'Crickent lighter', amount: 8 },
@@ -43,7 +43,7 @@ export const recipes = [
     time: [0, 28, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Soap', amount: 1 },
       { name: '0.6L water bottle', amount: 1 },
@@ -52,7 +52,7 @@ export const recipes = [
     time: [0, 35, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Soap', amount: 1 },
       { name: 'Heat-exchange alkali surface washer', amount: 1 },
@@ -62,7 +62,7 @@ export const recipes = [
     time: [0, 38, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'WD-40 400ml', amount: 1 },
       { name: 'Metal cutting scissors', amount: 1 },
@@ -71,7 +71,7 @@ export const recipes = [
     time: [2, 30, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Silicone tube', amount: 1 },
       { name: 'Wires', amount: 3 },
@@ -81,7 +81,7 @@ export const recipes = [
     time: [3, 21, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Expeditionary fuel tank', amount: 2 },
       { name: 'Metal cutting scissors', amount: 1 },
@@ -92,7 +92,7 @@ export const recipes = [
     time: [4, 52, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Bottle of vodka Tarkovskaya', amount: 1 },
       { name: 'Schaman shampoo', amount: 1 },
@@ -101,7 +101,7 @@ export const recipes = [
     time: [0, 40, 0],
   },
   {
-    facility: 'Lavatory',
+    facility: { name: 'Lavatory', level: 1 },
     input: [
       { name: 'Air filter for gas mask', amount: 2 },
       { name: 'Water filter', amount: 2 },
@@ -112,7 +112,7 @@ export const recipes = [
   },
   /** Workbench */
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Working LCD', amount: 4 },
       { name: 'Screwdriver', amount: 1 },
@@ -122,7 +122,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Flat screwdriver', amount: 1 },
       { name: 'DVD drive', amount: 1 },
@@ -132,7 +132,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Kite"', amount: 1 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
@@ -143,7 +143,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'T-Shaped Plug', amount: 2 },
       { name: 'Wires', amount: 2 },
@@ -154,21 +154,21 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Vepr AKM / VPO-209 366TKM carbine', amount: 1 }],
     output: [{ name: 'Weapon parts', amount: 2 }],
     time: [1, 18, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: '5.45x39 mm PS', amount: 70 }],
     output: [{ name: 'Gunpowder "Kite"', amount: 1 }],
     time: [1, 29, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Kite"', amount: 1 },
       { name: 'Matches', amount: 1 },
@@ -178,21 +178,21 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Gunpowder "Kite"', amount: 1 }],
     output: [{ name: '9x18 PM mm RG028 gzh', amount: 120 }],
     time: [1, 48, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Powercord', amount: 2 }],
     output: [{ name: 'Wires', amount: 8 }],
     time: [1, 58, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Power supply unit', amount: 1 },
       { name: 'Screwdriver', amount: 1 },
@@ -202,7 +202,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Flat screwdriver', amount: 1 },
       { name: 'Powerbank', amount: 1 },
@@ -212,7 +212,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Electric Drill', amount: 2 },
       { name: 'Flat screwdriver', amount: 1 },
@@ -223,7 +223,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Weapon parts', amount: 1 },
       { name: 'Polymer AK-74 foregrip (6P20 Sb.9)', amount: 1 },
@@ -234,7 +234,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'M67 Hand grenade', amount: 2 },
       { name: 'WRDG-2B Smoke grenade', amount: 1 },
@@ -244,7 +244,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'OFZ 30x160mm shell', amount: 1 },
       { name: 'Gunpowder "Kite"', amount: 2 },
@@ -254,7 +254,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: '5.45x39 mm PS', amount: 80 },
       { name: 'Bolts', amount: 1 },
@@ -264,14 +264,14 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Gunpowder "Hawk"', amount: 1 }],
     output: [{ name: '7.62x54R SNB', amount: 80 }],
     time: [1, 58, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: '7.62x39 mm HP', amount: 60 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
@@ -282,7 +282,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: '6-STEN-140-M military battery', amount: 1 },
       { name: 'Leatherman Multitool', amount: 1 },
@@ -292,14 +292,14 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'OFZ 30x160mm shell', amount: 1 }],
     output: [{ name: 'RGD-5 hand grenade', amount: 5 }],
     time: [1, 28, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Hawk"', amount: 1 },
       { name: 'Wires', amount: 4 },
@@ -309,7 +309,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Kite"', amount: 2 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
@@ -319,7 +319,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Hawk"', amount: 1 },
       { name: 'Damaged hard drive', amount: 2 },
@@ -329,14 +329,14 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Gunpowder "Eagle"', amount: 1 }],
     output: [{ name: '7.62x39 mm BP', amount: 120 }],
     time: [2, 30, 0],
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Kite"', amount: 1 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
@@ -347,7 +347,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Eagle"', amount: 1 },
       { name: 'OFZ 30x160mm shell', amount: 1 },
@@ -357,7 +357,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Workbench',
+    facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Hawk"', amount: 3 },
       { name: 'Radiator helix', amount: 1 },
@@ -368,14 +368,14 @@ export const recipes = [
 
   /** Medstation */
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [{ name: 'Pile of meds', amount: 1 }],
     output: [{ name: 'AI-2 medikit', amount: 3 }],
     time: [0, 22, 0],
   },
 
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [
       { name: 'Analgin painkillers', amount: 1 },
       { name: 'Aseptic bandage', amount: 1 },
@@ -386,7 +386,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [
       { name: 'AI-2 medikit', amount: 1 },
       { name: 'Aseptic bandage', amount: 1 },
@@ -397,7 +397,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [
       { name: 'Pile of meds', amount: 2 },
       { name: 'Army bandage', amount: 2 },
@@ -407,14 +407,14 @@ export const recipes = [
   },
 
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [{ name: 'Pile of meds', amount: 5 }],
     output: [{ name: 'Grizzly First Aid Kit', amount: 1 }],
     time: [0, 58, 0],
   },
 
   {
-    facility: 'Medstation',
+    facility: { name: 'Medstation', level: 1 },
     input: [
       { name: 'Ibuprofen painkillers', amount: 1 },
       { name: 'Golden Star Balm', amount: 1 },
@@ -425,7 +425,7 @@ export const recipes = [
   },
   /** Nutrion unit */
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
       { name: 'Army Crackers', amount: 2 },
       { name: 'Can of beef stew', amount: 1 },
@@ -436,7 +436,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
       { name: 'Alyonka chocolate bar', amount: 1 },
       { name: 'Pack of oat flakes', amount: 1 },
@@ -447,7 +447,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
       { name: 'Pack of sugar', amount: 1 },
       { name: 'Pack of milk', amount: 1 },
@@ -457,14 +457,14 @@ export const recipes = [
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [{ name: 'Alyonka chocolate bar', amount: 2 }],
     output: [{ name: 'Pack of sugar', amount: 1 }],
     time: [1, 23, 0],
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
       { name: 'Apollon Soyuz cigarettes', amount: 1 },
       { name: '42nd Signature Blend English Tea', amount: 1 },
@@ -474,7 +474,7 @@ export const recipes = [
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
       { name: 'Purified water', amount: 1 },
       { name: 'Silicone tube', amount: 1 },
@@ -484,9 +484,9 @@ export const recipes = [
   },
 
   {
-    facility: 'Nutrition unit',
+    facility: { name: 'Nutrition unit', level: 1 },
     input: [
-      { name: '"Fierce Hatchling" mmonshine', amount: 1 },
+      { name: '"Fierce Hatchling" moonshine', amount: 1 },
       { name: '0.6L water bottle', amount: 5 },
     ],
     output: [{ name: 'Bottle of vodka Tarkovskaya', amount: 7 }],
@@ -494,9 +494,9 @@ export const recipes = [
   },
   /** Water collector */
   {
-    facility: 'Water collector',
+    facility: { name: 'Water collector', level: 1 },
     input: [{ name: 'Water filter', amount: 1 }],
-    output: [{ name: 'Purified waterl', amount: 1 }],
+    output: [{ name: 'Purified water', amount: 1 }],
     time: [5, 25, 0],
   },
 ];
