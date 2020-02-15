@@ -17,4 +17,5 @@ Table.Body.Row = Row;
 Table.Body.Placeholder = Placeholder;
 Table.Price = Price;
 
+export { Table };
 export default Table;

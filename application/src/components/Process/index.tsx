@@ -11,4 +11,5 @@ Process.Item = Item;
 Process.Time = Time;
 Process.Output = Input;
 
+export { Process };
 export default Process;

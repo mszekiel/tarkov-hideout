@@ -8,6 +8,7 @@ export class HideoutProvider {
   api = setup({
     cache: {
       maxAge: 15 * 60 * 1000,
+      exclude: { query: false },
     },
   });
 

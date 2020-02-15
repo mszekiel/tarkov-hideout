@@ -1,11 +1,13 @@
 import * as React from "react";
-import { Recipe } from "../../types/Recipe";
-import { getRecipes } from "../../services/hideout";
-import Table from "../../components/Table";
-import Process from "../../components/Process";
 import { debounce } from "debounce";
 import styled from "styled-components";
+import InfiniteScroll from "react-infinite-scroller";
 import { useInView } from "react-intersection-observer";
+
+import { Table } from "../../components/Table";
+import { Recipe } from "../../types/Recipe";
+import { Process } from "../../components/Process";
+import { getRecipes } from "../../services/hideout";
 
 const Container = styled.div`
   display: flex;
@@ -81,17 +83,19 @@ const ContentTable = () => {
 
   return (
     <Container>
-      <Table>
-        <Table.Head>
-          <Table.Head.Item>Facility</Table.Head.Item>
-          <Table.Head.Item>Level</Table.Head.Item>
-          <Table.Head.Item>Process</Table.Head.Item>
-          <Table.Head.Item>Profit</Table.Head.Item>
-        </Table.Head>
-        <Table.Body>
-          {recipes.length > 0 ? recipes : getPlaceholders()}
-        </Table.Body>
-      </Table>
+      <InfiniteScroll loadMore={updateRecipes}>
+        <Table>
+          <Table.Head>
+            <Table.Head.Item>Facility</Table.Head.Item>
+            <Table.Head.Item>Level</Table.Head.Item>
+            <Table.Head.Item>Process</Table.Head.Item>
+            <Table.Head.Item>Profit</Table.Head.Item>
+          </Table.Head>
+          <Table.Body>
+            {recipes.length > 0 ? recipes : getPlaceholders()}
+          </Table.Body>
+        </Table>
+      </InfiniteScroll>
       <div ref={ref}>{recipes.length > 0 && <Trigger />}</div>
     </Container>
   );
