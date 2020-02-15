@@ -61,8 +61,8 @@ export const ErrorInfo = () => (
     <TopLabel>Error!</TopLabel>
     <BottomLabel>
       Missing item info! To make it available support the creator of {' '}
-      <InlineLink href="https://tarkov-market.ru/en/" target="_blank">
-         tarkov-market.ru
+      <InlineLink href="https://tarkov-market.com/en/" target="_blank">
+         tarkov-market.com
       </InlineLink>
     </BottomLabel>
   </Container>

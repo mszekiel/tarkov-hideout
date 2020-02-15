@@ -59,8 +59,8 @@ export const MarketInfo = () => (
   <Container>
     <TextBox>
       <Description>Item data provided by:</Description>
-      <Link href="https://tarkov-market.ru/en/" target="_blank">
-        Tarkov-Market.RU
+      <Link href="https://tarkov-market.com/en/" target="_blank">
+        tarkov-market.com
       </Link>
       <Shadow />
     </TextBox>
