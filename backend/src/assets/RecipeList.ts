@@ -214,11 +214,11 @@ export const recipes = [
   {
     facility: { name: 'Workbench', level: 2 },
     input: [
-      { name: 'Electric Drill', amount: 2 },
+      { name: 'Electric drill', amount: 2 },
       { name: 'Flat screwdriver', amount: 1 },
       { name: 'Screwdriver', amount: 1 },
     ],
-    output: [{ name: 'Electric Motor', amount: 1 }],
+    output: [{ name: 'Electric motor', amount: 1 }],
     time: [1, 20, 0],
   },
 
@@ -237,7 +237,7 @@ export const recipes = [
     facility: { name: 'Workbench', level: 2 },
     input: [
       { name: 'M67 Hand grenade', amount: 2 },
-      { name: 'WRDG-2B Smoke grenade', amount: 1 },
+      { name: 'RDG-2B Smoke grenade', amount: 1 },
     ],
     output: [{ name: 'Gunpowder "Eagle"', amount: 1 }],
     time: [1, 37, 0],
@@ -314,7 +314,7 @@ export const recipes = [
       { name: 'Gunpowder "Kite"', amount: 2 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
     ],
-    output: [{ name: '5.56x45 mm Warmage', amount: 200 }],
+    output: [{ name: '5.56x45mm Warmage', amount: 200 }],
     time: [2, 26, 0],
   },
 
@@ -322,7 +322,7 @@ export const recipes = [
     facility: { name: 'Workbench', level: 3 },
     input: [
       { name: 'Gunpowder "Hawk"', amount: 1 },
-      { name: 'Damaged hard drive', amount: 2 },
+      { name: 'Damaged hard drive (hdd)', amount: 2 },
     ],
     output: [{ name: '12/70 AP-20 Slug', amount: 120 }],
     time: [2, 28, 0],
@@ -381,7 +381,7 @@ export const recipes = [
       { name: 'Aseptic bandage', amount: 1 },
       { name: 'Immobilizing splint', amount: 1 },
     ],
-    output: [{ name: 'Salewa FIRST AID KIT', amount: 1 }],
+    output: [{ name: 'Salewa FIRST AID KIT (400/400)', amount: 1 }],
     time: [0, 22, 0],
   },
 
@@ -402,22 +402,22 @@ export const recipes = [
       { name: 'Pile of meds', amount: 2 },
       { name: 'Army bandage', amount: 2 },
     ],
-    output: [{ name: 'IFAK personal tactical first aid kit', amount: 2 }],
+    output: [{ name: 'IFAK personal tactical first aid kit (300/300)', amount: 2 }],
     time: [0, 50, 0],
   },
 
   {
     facility: { name: 'Medstation', level: 3 },
     input: [{ name: 'Pile of meds', amount: 5 }],
-    output: [{ name: 'Grizzly First Aid Kit', amount: 1 }],
+    output: [{ name: 'Grizzly First Aid Kit (1800/1800)', amount: 1 }],
     time: [0, 58, 0],
   },
 
   {
     facility: { name: 'Medstation', level: 3 },
     input: [
-      { name: 'Ibuprofen painkillers', amount: 1 },
-      { name: 'Golden Star Balm', amount: 1 },
+      { name: 'Ibuprofen painkillers (12/12)', amount: 1 },
+      { name: 'Golden Star Balm (10/10)', amount: 1 },
       { name: 'Pile of meds', amount: 5 },
     ],
     output: [{ name: 'Propital', amount: 7 }],
