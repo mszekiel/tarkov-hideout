@@ -40,11 +40,11 @@ const Placeholder = styled(Item)`
 
   &:nth-child(4) {
     width: 85px;
-    animation-delay: 0.6s;
+    animation-delay: 0.5s;
   }
   
   &:nth-child(5) {
-    width: 85px;
+    width: 90px;
     animation-delay: 0.6s;
   }
 

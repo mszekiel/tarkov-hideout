@@ -54,13 +54,13 @@ const sortIcon = {
 const ContentTable = () => {
   const [recipes, setRecipes] = React.useState<Recipe[]>([]);
   const [hasMore, setHasMore] = React.useState(true);
-  const [sortType, setStortType] = React.useState<SortType>("desc");
+  const [sortType, setStortType] = React.useState<SortType>("none");
 
   const updateRecipes = () => {
     debounce(
       () => {
         getRecipes(recipes.length).then(result => {
-          setRecipes(sortRecipes(recipes.concat(result)));
+          setRecipes(sortRecipes([...recipes].concat(result)));
           if (result.length <= 0) setHasMore(false);
         });
       },
@@ -70,19 +70,16 @@ const ContentTable = () => {
   };
 
   React.useEffect(() => {
-    if (recipes.length <= 0) {
-      updateRecipes();
-    }
-    setRecipes(sortRecipes(recipes));
-  }, [recipes, sortType]);
+    if (sortType !== "none") setRecipes(sortRecipes(recipes));
+  }, [sortType]);
 
   const sortRecipes = (recipeElements: Recipe[]) => {
     switch (sortType) {
       case "asc":
-        recipeElements.sort((a, b) => a.profit - b.profit);
+        recipeElements.sort((a, b) => b.profit - a.profit);
         return recipeElements;
       case "desc":
-        recipeElements.sort((a, b) => b.profit - a.profit);
+        recipeElements.sort((a, b) => a.profit - b.profit);
         return recipeElements;
       default:
         return recipeElements;
@@ -90,7 +87,11 @@ const ContentTable = () => {
   };
 
   const renderRecipes = (recipeList: Recipe[]) => {
-    return recipeList.map(recipe => <Table.Body.Recipe {...recipe} />);
+    if (recipeList.length > 0) {
+      return recipeList.map(recipe => <Table.Body.Recipe {...recipe} />);
+    } else {
+      return getPlaceholders();
+    }
   };
 
   const getPlaceholders = () => {
@@ -129,8 +130,7 @@ const ContentTable = () => {
         loadMore={updateRecipes}
         hasMore={hasMore}
         loader={<Trigger key="infinite_loader" />}
-        key="asdasd
-        "
+        key="infinite_table"
       >
         <Table key="table">
           <Table.Head key="table_head">
@@ -140,9 +140,7 @@ const ContentTable = () => {
             <Table.Head.Item>Profit {sorter()}</Table.Head.Item>
             <Table.Head.Item>Profit / H</Table.Head.Item>
           </Table.Head>
-          <Table.Body key="table_body">
-            {recipes.length > 0 ? renderRecipes(recipes) : getPlaceholders()}
-          </Table.Body>
+          <Table.Body key="table_body">{renderRecipes(recipes)}</Table.Body>
         </Table>
       </InfiniteScroll>
     </Container>

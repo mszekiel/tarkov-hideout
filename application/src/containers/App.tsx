@@ -14,8 +14,6 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-
-
 const App = () => {
   return (
     <ThemeProvider theme={mainTheme}>

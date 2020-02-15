@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import ContentTable from "./ContentTable";
+import { Footer } from "./Footer";
 
 const Hero = styled.p`
   font-family: ${props => props.theme.font};
@@ -9,9 +10,17 @@ const Hero = styled.p`
   text-align: center;
 `;
 
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+
 const Content = () => {
   return (
-    <div>
+    <Container>
       <Hero>
         <b>Hideout profit calculator</b> aggregates data provided by{" "}
         <i>Tarkov Market</i> created by{" "}
@@ -21,7 +30,8 @@ const Content = () => {
         possible profit of crafting and then selling item.
       </Hero>
       <ContentTable />
-    </div>
+      <Footer/>
+    </Container>
   );
 };
 

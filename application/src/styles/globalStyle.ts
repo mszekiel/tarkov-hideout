@@ -16,6 +16,10 @@ html {
     width: 100%;
 }
 
+#app {
+    height: 100%;
+}
+
 a {
     text-decoration: underline;
     color: inherit;
