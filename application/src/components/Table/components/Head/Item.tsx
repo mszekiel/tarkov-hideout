@@ -7,6 +7,7 @@ const Item = styled.td`
   padding: 10px 20px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.15);
+  user-select: none;
 `;
 
 export default Item;

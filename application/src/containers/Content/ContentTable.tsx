@@ -2,7 +2,6 @@ import * as React from "react";
 import { debounce } from "debounce";
 import styled, { keyframes } from "styled-components";
 import InfiniteScroll from "react-infinite-scroller";
-import { useInView } from "react-intersection-observer";
 
 import { Table } from "../../components/Table";
 import { Recipe } from "../../types/Recipe";
@@ -46,16 +45,22 @@ const Trigger = () => (
 
 type SortType = "asc" | "desc" | "none";
 
+const sortIcon = {
+  asc: "⯅",
+  desc: "⯆",
+  none: "⯇"
+};
+
 const ContentTable = () => {
-  const [recipes, setRecipes] = React.useState<JSX.Element[]>([]);
+  const [recipes, setRecipes] = React.useState<Recipe[]>([]);
   const [hasMore, setHasMore] = React.useState(true);
-  const [sortType, setStortType] = React.useState<SortType>("none");
+  const [sortType, setStortType] = React.useState<SortType>("desc");
 
   const updateRecipes = () => {
     debounce(
       () => {
         getRecipes(recipes.length).then(result => {
-          setRecipes(recipes.concat(renderRecipes(result)));
+          setRecipes(sortRecipes(recipes.concat(result)));
           if (result.length <= 0) setHasMore(false);
         });
       },
@@ -68,12 +73,25 @@ const ContentTable = () => {
     if (recipes.length <= 0) {
       updateRecipes();
     }
-  }, [recipes]);
+    setRecipes(sortRecipes(recipes));
+  }, [recipes, sortType]);
 
-  const sortRecipes = (mode: SortType) => {};
+  const sortRecipes = (recipeElements: Recipe[]) => {
+    switch (sortType) {
+      case "asc":
+        recipeElements.sort((a, b) => a.profit - b.profit);
+        return recipeElements;
+      case "desc":
+        recipeElements.sort((a, b) => b.profit - a.profit);
+        return recipeElements;
+      default:
+        return recipeElements;
+    }
+  };
 
-  const renderRecipes = (recipeList: Recipe[]) =>
-    recipeList.map(recipe => <Table.Body.Recipe {...recipe} />);
+  const renderRecipes = (recipeList: Recipe[]) => {
+    return recipeList.map(recipe => <Table.Body.Recipe {...recipe} />);
+  };
 
   const getPlaceholders = () => {
     return [1, 2, 3, 4].map(i => (
@@ -85,6 +103,24 @@ const ContentTable = () => {
         <Table.Body.Placeholder />
       </Table.Body.Row>
     ));
+  };
+
+  const handleSortChange = () => {
+    switch (sortType) {
+      case "asc":
+        setStortType("desc");
+        break;
+      case "desc":
+        setStortType("asc");
+        break;
+      default:
+        setStortType("asc");
+        break;
+    }
+  };
+
+  const sorter = () => {
+    return <span onClick={handleSortChange}>{sortIcon[sortType]}</span>;
   };
 
   return (
@@ -101,11 +137,11 @@ const ContentTable = () => {
             <Table.Head.Item>Facility</Table.Head.Item>
             <Table.Head.Item>Level</Table.Head.Item>
             <Table.Head.Item>Process</Table.Head.Item>
-            <Table.Head.Item>Profit</Table.Head.Item>
+            <Table.Head.Item>Profit {sorter()}</Table.Head.Item>
             <Table.Head.Item>Profit / H</Table.Head.Item>
           </Table.Head>
           <Table.Body key="table_body">
-            {recipes.length > 0 ? recipes : getPlaceholders()}
+            {recipes.length > 0 ? renderRecipes(recipes) : getPlaceholders()}
           </Table.Body>
         </Table>
       </InfiniteScroll>

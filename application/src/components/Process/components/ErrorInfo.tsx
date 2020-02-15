@@ -35,7 +35,6 @@ const TopLabel = styled.span`
 
 const BottomLabel = styled.div`
   color: white;
-  width: 20vw;
   margin: 10px 0;
   padding: 5px 10px;
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 5px black, 0 0 5px black;
