@@ -16,6 +16,11 @@ html {
     width: 100%;
 }
 
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
 @font-face {
     font-family: 'Bender'; 
     src: url("./resources/fonts/Bender.otf");

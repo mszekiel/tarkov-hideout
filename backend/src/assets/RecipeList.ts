@@ -11,7 +11,7 @@ export const recipes = [
   },
   /** Intelligence Center */
   {
-    facility: { name: 'Intelligence Center', level: 1 },
+    facility: { name: 'Intelligence Center', level: 2 },
     input: [
       { name: 'Broken GPhone', amount: 1 },
       { name: 'Broken GPhone X', amount: 1 },
@@ -34,7 +34,7 @@ export const recipes = [
     time: [0, 2, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'Zibbo lighter', amount: 6 },
       { name: 'Crickent lighter', amount: 8 },
@@ -43,7 +43,7 @@ export const recipes = [
     time: [0, 28, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'Soap', amount: 1 },
       { name: '0.6L water bottle', amount: 1 },
@@ -52,7 +52,7 @@ export const recipes = [
     time: [0, 35, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'Soap', amount: 1 },
       { name: 'Heat-exchange alkali surface washer', amount: 1 },
@@ -62,7 +62,7 @@ export const recipes = [
     time: [0, 38, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'WD-40 400ml', amount: 1 },
       { name: 'Metal cutting scissors', amount: 1 },
@@ -71,7 +71,7 @@ export const recipes = [
     time: [2, 30, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'Silicone tube', amount: 1 },
       { name: 'Wires', amount: 3 },
@@ -81,7 +81,7 @@ export const recipes = [
     time: [3, 21, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 2 },
     input: [
       { name: 'Expeditionary fuel tank', amount: 2 },
       { name: 'Metal cutting scissors', amount: 1 },
@@ -92,7 +92,7 @@ export const recipes = [
     time: [4, 52, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 3 },
     input: [
       { name: 'Bottle of vodka Tarkovskaya', amount: 1 },
       { name: 'Schaman shampoo', amount: 1 },
@@ -101,7 +101,7 @@ export const recipes = [
     time: [0, 40, 0],
   },
   {
-    facility: { name: 'Lavatory', level: 1 },
+    facility: { name: 'Lavatory', level: 3 },
     input: [
       { name: 'Air filter for gas mask', amount: 2 },
       { name: 'Water filter', amount: 2 },

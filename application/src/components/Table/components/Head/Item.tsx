@@ -6,7 +6,7 @@ const Item = styled.td`
   font-weight: bold;
   padding: 10px 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
 `;
 
 export default Item;

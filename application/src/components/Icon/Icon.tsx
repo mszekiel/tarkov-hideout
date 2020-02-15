@@ -43,7 +43,7 @@ const ImageContainer = styled.div<ImageContainerProps>`
       left: 50%;
       top: 100%;
       transform: translate(-50%, 120%);
-      content: "${props => props.name.replace(/"/g, "\\\"")}";
+      content: "${props => props.name.replace(/"/g, '\\"')}";
       font-size: 10pt;
       background-color: black;
       color: ${props => props.theme.colors.primary};
@@ -55,11 +55,31 @@ const ImageContainer = styled.div<ImageContainerProps>`
   }
 `;
 
+const Cross = styled.div`
+  &:before,
+  &:after {
+    position: absolute;
+    content: " ";
+    left: 27.5px;
+    top: 0;
+    height: 60px;
+    width: 8px;
+    background-color: rgb(140, 0, 0);
+    box-shadow: 0 0 5px 0 rgb(140, 0, 0);
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+`;
+
 const Icon: React.FC<IconProps> = ({ name = "Loading", src }) => {
   return (
     <Container>
       <ImageContainer name={name}>
-        {src ? <img src={src} /> : <Loader />}
+        {src ? <img src={src} /> : <Cross />}
       </ImageContainer>
     </Container>
   );

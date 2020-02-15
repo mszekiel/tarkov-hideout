@@ -39,7 +39,7 @@ const Item: React.FC<ItemProps> = ({ name, amount, icon, price }) => {
   return (
     <ItemContainer>
       <IconContainer>
-        <Icon name={name} src={icon} />
+        <Icon name={price ? `${name} - ${price}₽` : "Can't get item info 😔"} src={icon} />
       </IconContainer>
       <Amount>{amount}</Amount>
     </ItemContainer>

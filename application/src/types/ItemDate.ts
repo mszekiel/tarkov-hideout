@@ -8,12 +8,18 @@ export class ItemDate {
     const hours = this.date.getHours();
     const minutes = this.date.getMinutes();
     const seconds = this.date.getSeconds();
-    const parseValue = (value: number) => ('0' + value).slice(-2);
+    const parseValue = (value: number) => ("0" + value).slice(-2);
 
     return [
-      hours ? `${parseValue(hours)}:` : '',
-      minutes ? `${parseValue(minutes)}:` : '',
-      parseValue(seconds),
-    ].join('');
+      hours ? `${parseValue(hours)}:` : "",
+      minutes ? `${parseValue(minutes)}:` : "",
+      parseValue(seconds)
+    ].join("");
+  }
+
+  getHourFactor() {
+    return Number(
+      (60 / (this.date.getHours() * 60 + this.date.getMinutes())).toFixed(4)
+    );
   }
 }

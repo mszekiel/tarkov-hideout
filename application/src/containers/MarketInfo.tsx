@@ -37,6 +37,7 @@ const TextBox = styled.div`
 `;
 
 const Description = styled.span`
+font-weight: 600;
   color: ${props => props.theme.colors.secondary};
   padding: 2px 0;
 `;
