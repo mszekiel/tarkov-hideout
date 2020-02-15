@@ -5,6 +5,7 @@ import GlobalStyle from "../styles/globalStyle";
 import Header from "./Header/Header";
 import Table from "../components/Table";
 import Content from "./Content/Content";
+import { MarketInfo } from "./MarketInfo";
 
 const Container = styled.div`
   width: 100%;
@@ -13,13 +14,16 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+
+
 const App = () => {
   return (
     <ThemeProvider theme={mainTheme}>
       <GlobalStyle />
       <Container>
         <Header />
-        <Content/>
+        <Content />
+        <MarketInfo/>
       </Container>
     </ThemeProvider>
   );

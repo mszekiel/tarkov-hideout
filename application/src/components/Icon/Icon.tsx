@@ -43,7 +43,7 @@ const ImageContainer = styled.div<ImageContainerProps>`
       left: 50%;
       top: 100%;
       transform: translate(-50%, 120%);
-      content: "${props => props.name}";
+      content: "${props => props.name.replace(/"/g, "\\\"")}";
       font-size: 10pt;
       background-color: black;
       color: ${props => props.theme.colors.primary};

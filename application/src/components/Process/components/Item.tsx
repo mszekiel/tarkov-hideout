@@ -1,8 +1,6 @@
 import * as React from "react";
 import Icon from "../../Icon/Icon";
 import styled from "styled-components";
-import Loader from "../../Loader/Loader";
-import { Resource } from "../../../types/Resource";
 
 const IconContainer = styled.div`
   border: 1px solid black;
