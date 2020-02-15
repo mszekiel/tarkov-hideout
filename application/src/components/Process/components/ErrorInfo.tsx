@@ -39,7 +39,7 @@ const BottomLabel = styled.div`
   color: white;
   margin: 10px 0;
   padding: 5px 10px;
-  width: 300px;
+  width: 350px;
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 5px black, 0 0 5px black;
   background-image: repeating-linear-gradient(
     45deg,
