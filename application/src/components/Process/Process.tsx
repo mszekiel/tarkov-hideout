@@ -7,7 +7,7 @@ import { ItemDate } from "../../types/ItemDate";
 import { Resource } from "../../types/Resource";
 import { ErrorInfo } from "./components/ErrorInfo";
 
-const ProcessContainer = styled.div`
+export const ProcessContainer = styled.div`
   display: inline-block;
   align-items: center;
   padding: 10px;

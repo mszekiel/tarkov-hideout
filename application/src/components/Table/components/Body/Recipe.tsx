@@ -4,11 +4,7 @@ import Process from "../../../Process";
 import { Recipe as _Recipe } from "../../../../types/Recipe";
 
 export const Recipe = (recipe: _Recipe) => (
-  <Table.Body.Row
-    key={Math.random()
-      .toString(36)
-      .substring(7)}
-  >
+  <Table.Body.Row>
     <Table.Body.Item>{recipe.facility.name}</Table.Body.Item>
     <Table.Body.Item>{recipe.facility.level}</Table.Body.Item>
     <Table.Body.Item>

@@ -13,6 +13,8 @@ const Container = styled.div`
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.font};
   background-color: black;
+  border: 1px solid ${props => props.theme.colors.secondary};
+  border-width: 1px 0 0 1px;
 `;
 
 const Shadow = styled.div`

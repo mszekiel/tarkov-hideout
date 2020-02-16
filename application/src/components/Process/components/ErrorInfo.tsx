@@ -6,25 +6,6 @@ const breathTop = keyframes`
 100% {  box-shadow: 0 0 30px 0 rgb(140, 0, 0);};
 `;
 
-const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  /* pointer-events: none; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-  color: black;
-`;
-
 const TopLabel = styled.span`
   font-weight: 700;
   font-size: 16pt;
@@ -51,6 +32,28 @@ const BottomLabel = styled.div`
   box-shadow: 0 0 10px 0 rgb(0, 0, 0);
 `;
 
+const Container = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  color: black;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.23;
+  }
+`;
+
 const InlineLink = styled.a`
   text-decoration: underline;
   color: white;
@@ -60,9 +63,11 @@ export const ErrorInfo = () => (
   <Container>
     <TopLabel>Error!</TopLabel>
     <BottomLabel>
-      Missing item info! To make it available support the creator of {' '}
+      Some items price are not being tracked! Support data provider to make it
+      possible!
+      <br />
       <InlineLink href="https://tarkov-market.com/en/" target="_blank">
-         tarkov-market.com
+        tarkov-market.com
       </InlineLink>
     </BottomLabel>
   </Container>

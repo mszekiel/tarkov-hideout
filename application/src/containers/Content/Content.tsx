@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import ContentTable from "./ContentTable";
-import { Footer } from "./Footer";
+import ContentTable from "./componentss/ContentTable";
+import { Footer } from "./componentss/Footer";
+import { Changelog } from "./componentss/Changelog";
 
 const Hero = styled.p`
   font-family: ${props => props.theme.font};
@@ -31,6 +32,7 @@ const Content = () => {
       </Hero>
       <ContentTable />
       <Footer/>
+      <Changelog/>
     </Container>
   );
 };
