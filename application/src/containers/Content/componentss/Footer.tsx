@@ -25,7 +25,6 @@ const Contributors = styled.span`
     &:after {
       position: absolute;
       right: -100px;
-      border: 1px solid black;
       content: "Renchon";
     }
   }

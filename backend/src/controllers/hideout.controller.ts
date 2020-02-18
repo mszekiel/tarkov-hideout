@@ -10,4 +10,9 @@ export class HideoutController {
   getRecipes(@Query() query: WithPagination) {
     return this.hideoutService.getRecipes(query);
   }
+
+  @Get('changelog')
+  getChangelog() {
+    return this.hideoutService.getChangelog();
+  }
 }
