@@ -4,7 +4,7 @@ import { ItemDate } from "../types/ItemDate";
 const API_URL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:2137"
-    : "https://tarkov-calculator.herokuapp.com";
+    : "";
 
 export async function getRecipes(start: number = 0) {
   const response = await fetch(
