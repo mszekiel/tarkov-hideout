@@ -7,7 +7,7 @@ interface ContainerProps {
 
 const Container = styled.div<ContainerProps>`
   font-family: ${props => props.theme.font};
-  border: 1px solid ${props => props.theme.colors.secondary};
+  border: 1px solid ${props => props.theme.colors.primary};
   background-color: black;
   position: fixed;
   left: 0;

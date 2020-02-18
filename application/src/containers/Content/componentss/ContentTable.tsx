@@ -57,9 +57,13 @@ const ContentTable = () => {
 
   const updateRecipes = () =>
     getRecipes(recipes.length).then(result => {
-      setRecipes([...recipes].concat(result));
+      setRecipes([].concat([...recipes].concat(result)));
       if (result.length <= 0) setHasMore(false);
     });
+
+  React.useEffect(() => {
+    updateRecipes();
+  }, []);
 
   React.useEffect(() => {
     setRecipes(sortRecipes(recipes));
@@ -114,23 +118,23 @@ const ContentTable = () => {
 
   return (
     <Container key="con">
-      <InfiniteScroll
+      {/* <InfiniteScroll
         loadMore={updateRecipes}
         hasMore={hasMore}
         loader={<Trigger key="infinite_loader" />}
         key="infinite_table"
-      >
-        <Table key="table">
-          <Table.Head key="table_head">
-            <Table.Head.Item>Facility</Table.Head.Item>
-            <Table.Head.Item>Level</Table.Head.Item>
-            <Table.Head.Item>Process</Table.Head.Item>
-            <Table.Head.Item>Profit {sorter()}</Table.Head.Item>
-            <Table.Head.Item>Profit / H</Table.Head.Item>
-          </Table.Head>
-          <Table.Body key="table_body">{...renderRecipes(recipes)}</Table.Body>
-        </Table>
-      </InfiniteScroll>
+      > */}
+      <Table key="table">
+        <Table.Head key="table_head">
+          <Table.Head.Item>Facility</Table.Head.Item>
+          <Table.Head.Item>Level</Table.Head.Item>
+          <Table.Head.Item>Process</Table.Head.Item>
+          <Table.Head.Item>Profit {sorter()}</Table.Head.Item>
+          <Table.Head.Item>Profit / H</Table.Head.Item>
+        </Table.Head>
+        <Table.Body key="table_body">{...renderRecipes(recipes)}</Table.Body>
+      </Table>
+      {/* </InfiniteScroll> */}
     </Container>
   );
 };
