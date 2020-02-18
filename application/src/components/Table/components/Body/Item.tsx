@@ -7,7 +7,7 @@ const Item = styled.td`
   padding: 10px 20px;
 
   &:hover {
-    box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.05);
+    /* box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.05); */
   }
 `;
 

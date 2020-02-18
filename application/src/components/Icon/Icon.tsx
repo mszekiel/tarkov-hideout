@@ -16,7 +16,7 @@ const Container = styled.div`
   width: 62px;
   background-color: rgb(50, 50, 50);
   transition: 0.2s ease-in-out;
-  box-shadow: inset 0 0 0 1px #4e4c56, inset 0 0 3px 0 #020202;
+  /* box-shadow: inset 0 0 0 1px #4e4c56, inset 0 0 3px 0 #020202; */
   position: relative;
 
   &:hover {
@@ -65,7 +65,7 @@ const Cross = styled.div`
     height: 60px;
     width: 8px;
     background-color: rgb(140, 0, 0);
-    box-shadow: 0 0 5px 0 rgb(140, 0, 0);
+    /* box-shadow: 0 0 5px 0 rgb(140, 0, 0); */
   }
   &:before {
     transform: rotate(45deg);

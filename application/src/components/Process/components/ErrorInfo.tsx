@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 const breathTop = keyframes`
 0% {};
-100% {  box-shadow: 0 0 30px 0 rgb(140, 0, 0);};
+/* 100% {  box-shadow: 0 0 30px 0 rgb(140, 0, 0);}; */
 `;
 
 const TopLabel = styled.span`
@@ -12,7 +12,7 @@ const TopLabel = styled.span`
   display: inline-block;
   padding: 5px 10px;
   background-color: rgb(140, 0, 0);
-  box-shadow: 0 0 10px 0 rgb(140, 0, 0);
+  /* box-shadow: 0 0 10px 0 rgb(140, 0, 0); */
   animation: ${breathTop} 0.5s ease-out infinite alternate;
 `;
 
@@ -29,7 +29,7 @@ const BottomLabel = styled.div`
     rgba(0, 0, 0, 0.7) 10px,
     rgba(0, 0, 0, 0.7) 20px
   );
-  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  /* box-shadow: 0 0 10px 0 rgb(0, 0, 0); */
 `;
 
 const Container = styled.div`
@@ -41,7 +41,7 @@ const Container = styled.div`
   height: 100%;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6); */
   z-index: 100;
   display: flex;
   flex-direction: column;

@@ -20,11 +20,11 @@ const Button = styled.div<ButtonProps>`
 
   &:hover {
     opacity: 0.75;
-    box-shadow: inset 0 0 2px 0 ${props => props.theme.colors.primary};
+    /* box-shadow: inset 0 0 2px 0 ${props => props.theme.colors.primary}; */
   }
 
   &:active {
-    box-shadow: none;
+    /* box-shadow: none; */
     color: black;
     background-color: ${props => props.theme.colors.primary};
     opacity: 0.85;
