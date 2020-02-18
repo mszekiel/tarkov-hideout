@@ -14,7 +14,7 @@ export const recipes = [
     facility: { name: 'Intelligence Center', level: 2 },
     input: [
       { name: 'Broken GPhone', amount: 1 },
-      { name: 'Broken GPhone X', amount: 1 },
+      { name: 'Broken GPhone X (GPX)', amount: 1 },
       { name: 'SSD drive', amount: 1 },
     ],
     output: [{ name: 'Secure Flash drive', amount: 3 }],
@@ -58,7 +58,7 @@ export const recipes = [
       { name: 'Heat-exchange alkali surface washer', amount: 1 },
       { name: 'Sodium bicarbonate', amount: 1 },
     ],
-    output: [{ name: 'Ox bleach', amount: 1 }],
+    output: [{ name: 'Ox bleach', amount: 5 }],
     time: [0, 38, 0],
   },
   {
@@ -138,7 +138,7 @@ export const recipes = [
       { name: 'Gunpowder "Eagle"', amount: 1 },
       { name: 'Matches', amount: 1 },
     ],
-    output: [{ name: 'Printed circuit board', amount: 2 }],
+    output: [{ name: 'Gunpowder "Hawk"', amount: 2 }],
     time: [0, 35, 0],
   },
 
@@ -495,7 +495,7 @@ export const recipes = [
   /** Water collector */
   {
     facility: { name: 'Water collector', level: 3 },
-    input: [{ name: 'Water filter', amount: 1 }],
+    input: [{ name: 'Water filter', amount: 0.64 }],
     output: [{ name: 'Purified water', amount: 1 }],
     time: [5, 25, 0],
   },

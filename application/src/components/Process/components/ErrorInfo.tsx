@@ -3,26 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 const breathTop = keyframes`
 0% {};
-100% {  box-shadow: 0 0 30px 0 rgb(140, 0, 0);};
-`;
-
-const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  /* pointer-events: none; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-  color: black;
+/* 100% {  box-shadow: 0 0 30px 0 rgb(140, 0, 0);}; */
 `;
 
 const TopLabel = styled.span`
@@ -31,7 +12,7 @@ const TopLabel = styled.span`
   display: inline-block;
   padding: 5px 10px;
   background-color: rgb(140, 0, 0);
-  box-shadow: 0 0 10px 0 rgb(140, 0, 0);
+  /* box-shadow: 0 0 10px 0 rgb(140, 0, 0); */
   animation: ${breathTop} 0.5s ease-out infinite alternate;
 `;
 
@@ -48,7 +29,29 @@ const BottomLabel = styled.div`
     rgba(0, 0, 0, 0.7) 10px,
     rgba(0, 0, 0, 0.7) 20px
   );
-  box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  /* box-shadow: 0 0 10px 0 rgb(0, 0, 0); */
+`;
+
+const Container = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  /* box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6); */
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  color: black;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.23;
+  }
 `;
 
 const InlineLink = styled.a`
@@ -60,9 +63,11 @@ export const ErrorInfo = () => (
   <Container>
     <TopLabel>Error!</TopLabel>
     <BottomLabel>
-      Missing item info! To make it available support the creator of {' '}
+      Some items price are not being tracked! Support data provider to make it
+      possible!
+      <br />
       <InlineLink href="https://tarkov-market.com/en/" target="_blank">
-         tarkov-market.com
+        tarkov-market.com
       </InlineLink>
     </BottomLabel>
   </Container>

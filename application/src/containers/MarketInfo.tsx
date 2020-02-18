@@ -13,10 +13,12 @@ const Container = styled.div`
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.font};
   background-color: black;
+  border: 1px solid ${props => props.theme.colors.secondary};
+  border-width: 1px 0 0 1px;
 `;
 
 const Shadow = styled.div`
-  box-shadow: 5px 5px 20px 10px ${props => props.theme.colors.secondary};
+  /* box-shadow: 5px 5px 20px 10px ${props => props.theme.colors.secondary}; */
   animation: ${shadowBreath} 0.8s ease-in-out infinite alternate;
   position: absolute;
   top: 0;
@@ -37,7 +39,7 @@ const TextBox = styled.div`
 `;
 
 const Description = styled.span`
-font-weight: 600;
+  font-weight: 600;
   color: ${props => props.theme.colors.secondary};
   padding: 2px 0;
 `;

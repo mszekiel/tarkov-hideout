@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Main = styled.header`
   border-bottom: 1px solid ${props => props.theme.colors.secondary};
-  box-shadow: 0px 1px 5px 0px ${props => props.theme.colors.secondary};
+  /* box-shadow: 0px 1px 5px 0px ${props => props.theme.colors.secondary}; */
 `;
 
 const Container = styled.div`
