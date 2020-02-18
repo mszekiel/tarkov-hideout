@@ -80,6 +80,22 @@ a {
     font-weight: 900;
     font-style: italic;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(110,110,110,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: ${props => props.theme.colors.secondary};
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: ${props => props.theme.colors.primary};
+}
 `;
 
 export default GlobalStyle;

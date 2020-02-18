@@ -5,6 +5,7 @@ import { WithPagination } from 'src/types/WithPagination';
 import { Recipe } from 'src/types/Recipe';
 import { classToPlain } from 'class-transformer';
 import { RecipeFacade } from 'src/assets/RecipeFacade';
+import { changelog } from 'src/assets/changelog';
 
 @Injectable()
 export class HideoutService {
@@ -37,5 +38,9 @@ export class HideoutService {
           }),
       )
       .map(recipe => classToPlain(new RecipeFacade(recipe)));
+  }
+
+  getChangelog() {
+    return changelog;
   }
 }

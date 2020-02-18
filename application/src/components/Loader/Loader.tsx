@@ -6,6 +6,7 @@ const StyledSpinner = styled.svg`
   position: absolute;
   top: 0;
   left: 0;
+  padding: 40px 0;
 
   & .path {
     stroke: ${props => props.theme.colors.primary};
