@@ -13,6 +13,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "mszekiel",
+      "name": "Miłosz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12242002?v=4",
+      "profile": "https://www.linkedin.com/in/miloszekiel/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
