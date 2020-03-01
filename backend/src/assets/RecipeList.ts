@@ -9,18 +9,20 @@ export const recipes = [
     output: [{ name: '"Fierce Hatchling" moonshine', amount: 1 }],
     time: [3, 3, 0],
   },
-  /** Intelligence Center */
+  /** Intelligence Center Level 2 */
   {
     facility: { name: 'Intelligence Center', level: 2 },
     input: [
       { name: 'Broken GPhone', amount: 1 },
-      { name: 'Broken GPhone X (GPX)', amount: 1 },
+      { name: 'Broken GPhone X', amount: 1 },
       { name: 'SSD drive', amount: 1 },
     ],
     output: [{ name: 'Secure Flash drive', amount: 3 }],
     time: [34, 13, 0],
   },
-  /** Lavatory */
+
+  /** Lavatory Level 1 */
+
   {
     facility: { name: 'Lavatory', level: 1 },
     input: [{ name: 'Printer paper', amount: 1 }],
@@ -33,6 +35,9 @@ export const recipes = [
     output: [{ name: 'Air filter for gas mask', amount: 1 }],
     time: [0, 2, 0],
   },
+
+  /** Lavatory Level 2 */
+
   {
     facility: { name: 'Lavatory', level: 2 },
     input: [
@@ -48,7 +53,7 @@ export const recipes = [
       { name: 'Soap', amount: 1 },
       { name: '0.6L water bottle', amount: 1 },
     ],
-    output: [{ name: 'Schaman shampoo', amount: 1 }],
+    output: [{ name: 'Schaman shampoo', amount: 2 }],
     time: [0, 35, 0],
   },
   {
@@ -67,7 +72,7 @@ export const recipes = [
       { name: 'WD-40 400ml', amount: 1 },
       { name: 'Metal cutting scissors', amount: 1 },
     ],
-    output: [{ name: 'WD-40 100ml', amount: 2 }],
+    output: [{ name: 'WD-40 100ml.', amount: 2 }], //error in wd-40 100ml item (dot at the end)
     time: [2, 30, 0],
   },
   {
@@ -77,7 +82,7 @@ export const recipes = [
       { name: 'Wires', amount: 3 },
       { name: 'Insulating tape', amount: 3 },
     ],
-    output: [{ name: 'Corrugated hose', amount: 1 }],
+    output: [{ name: 'Corrugated hose', amount: 2 }],
     time: [3, 21, 0],
   },
   {
@@ -91,6 +96,9 @@ export const recipes = [
     output: [{ name: 'Magazine case', amount: 1 }],
     time: [4, 52, 0],
   },
+
+  /** Lavatory Level 3 */
+
   {
     facility: { name: 'Lavatory', level: 3 },
     input: [
@@ -110,7 +118,9 @@ export const recipes = [
     output: [{ name: 'FP-100 filter absorber', amount: 1 }],
     time: [2, 36, 0],
   },
-  /** Workbench */
+
+  /** Workbench Level 1 */
+
   {
     facility: { name: 'Workbench', level: 1 },
     input: [
@@ -136,7 +146,7 @@ export const recipes = [
     input: [
       { name: 'Gunpowder "Kite"', amount: 1 },
       { name: 'Gunpowder "Eagle"', amount: 1 },
-      { name: 'Matches', amount: 1 },
+      { name: 'Classic matches', amount: 1 },   //matches do not have a valid icon
     ],
     output: [{ name: 'Gunpowder "Hawk"', amount: 2 }],
     time: [0, 35, 0],
@@ -171,17 +181,17 @@ export const recipes = [
     facility: { name: 'Workbench', level: 1 },
     input: [
       { name: 'Gunpowder "Kite"', amount: 1 },
-      { name: 'Matches', amount: 1 },
+      { name: 'Classic matches', amount: 1 },
     ],
-    output: [{ name: '12/70 8.5 mm "Magnum" Buckshot', amount: 60 }],
+    output: [{ name: '12/70 8.5 mm "Magnum" Buckshot', amount: 120 }],
     time: [1, 31, 0],
   },
 
   {
     facility: { name: 'Workbench', level: 1 },
     input: [{ name: 'Gunpowder "Kite"', amount: 1 }],
-    output: [{ name: '9x18 PM mm RG028 gzh', amount: 120 }],
-    time: [1, 48, 0],
+    output: [{ name: '9x18 PM mm RG028 gzh', amount: 140 }],
+    time: [1, 43, 0],
   },
 
   {
@@ -200,6 +210,8 @@ export const recipes = [
     output: [{ name: 'Capacitors', amount: 8 }],
     time: [2, 4, 0],
   },
+
+    /** Workbench Level 2 */
 
   {
     facility: { name: 'Workbench', level: 2 },
@@ -230,7 +242,7 @@ export const recipes = [
       { name: 'Polymer stock for AK-74M (6P34 Sb.15)', amount: 1 },
     ],
     output: [{ name: 'AK-74M 5.45x39 assault rifle', amount: 1 }],
-    time: [1, 26, 0],
+    time: [1, 23, 0],
   },
 
   {
@@ -298,6 +310,8 @@ export const recipes = [
     time: [1, 28, 0],
   },
 
+  /** Workbench Level 3 */
+
   {
     facility: { name: 'Workbench', level: 3 },
     input: [
@@ -322,7 +336,7 @@ export const recipes = [
     facility: { name: 'Workbench', level: 3 },
     input: [
       { name: 'Gunpowder "Hawk"', amount: 1 },
-      { name: 'Damaged hard drive (hdd)', amount: 2 },
+      { name: 'Damaged hard drive', amount: 2 },
     ],
     output: [{ name: '12/70 AP-20 Slug', amount: 120 }],
     time: [2, 28, 0],
@@ -353,7 +367,7 @@ export const recipes = [
       { name: 'OFZ 30x160mm shell', amount: 1 },
     ],
     output: [{ name: '5.56x45 mm M995', amount: 140 }],
-    time: [1, 20, 0],
+    time: [2, 26, 0],
   },
 
   {
@@ -363,10 +377,21 @@ export const recipes = [
       { name: 'Radiator helix', amount: 1 },
     ],
     output: [{ name: '7.62x51 mm M61', amount: 130 }],
-    time: [1, 20, 0],
+    time: [2, 46, 0],
   },
 
-  /** Medstation */
+  {
+    facility: { name: 'Workbench', level: 3 },
+    input: [
+      { name: '6-STEN-140-M military battery', amount: 1 },
+      { name: 'Leatherman Multitool', amount: 1 },
+    ],
+    output: [{ name: 'Car battery', amount: 5 }],
+    time: [2, 46, 0],
+  },
+
+  /** Medstation Level 1 */
+  
   {
     facility: { name: 'Medstation', level: 1 },
     input: [{ name: 'Pile of meds', amount: 1 }],
@@ -384,6 +409,8 @@ export const recipes = [
     output: [{ name: 'Salewa FIRST AID KIT (400/400)', amount: 1 }],
     time: [0, 22, 0],
   },
+
+  /** Medstation Level 2 */
 
   {
     facility: { name: 'Medstation', level: 2 },
@@ -406,6 +433,8 @@ export const recipes = [
     time: [0, 50, 0],
   },
 
+    /** Medstation Level 3 */
+
   {
     facility: { name: 'Medstation', level: 3 },
     input: [{ name: 'Pile of meds', amount: 5 }],
@@ -423,7 +452,9 @@ export const recipes = [
     output: [{ name: 'Propital', amount: 7 }],
     time: [1, 21, 0],
   },
-  /** Nutrion unit */
+
+  /** Nutrion unit Level 1 */
+
   {
     facility: { name: 'Nutrition unit', level: 1 },
     input: [
@@ -434,6 +465,8 @@ export const recipes = [
     output: [{ name: 'Iskra lunch box', amount: 2 }],
     time: [0, 48, 0],
   },
+
+  /** Nutrion unit Level 2 */
 
   {
     facility: { name: 'Nutrition unit', level: 2 },
@@ -473,6 +506,8 @@ export const recipes = [
     time: [1, 41, 0],
   },
 
+  /** Nutrion unit Level 3 */
+
   {
     facility: { name: 'Nutrition unit', level: 3 },
     input: [
@@ -492,7 +527,9 @@ export const recipes = [
     output: [{ name: 'Bottle of vodka Tarkovskaya', amount: 7 }],
     time: [1, 19, 0],
   },
-  /** Water collector */
+
+  /** Water collector Level 3 */
+
   {
     facility: { name: 'Water collector', level: 3 },
     input: [{ name: 'Water filter', amount: 0.64 }],
