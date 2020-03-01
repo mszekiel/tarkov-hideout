@@ -22,6 +22,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kevinunger",
+      "name": "Kevin Unger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5601589?v=4",
+      "profile": "https://github.com/kevinunger",
+      "contributions": [
+        "code",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
