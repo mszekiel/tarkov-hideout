@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Renchon9",
+      "name": "Renchon9",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/61201020?v=4",
+      "profile": "https://github.com/Renchon9",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "tarkov-hideout",
+  "projectOwner": "mszekiel",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
