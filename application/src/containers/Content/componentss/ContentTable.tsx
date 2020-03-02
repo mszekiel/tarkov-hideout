@@ -43,7 +43,8 @@ const Trigger = () => (
   </LoaderContainer>
 );
 
-type SortType = "asc" | "desc";
+type sortTypeProfit = "asc" | "desc";
+type sortTypeHour = "asc" | "desc";
 
 const sortIcon = {
   asc: "⯅",
@@ -53,7 +54,8 @@ const sortIcon = {
 const ContentTable = () => {
   const [recipes, setRecipes] = React.useState<Recipe[]>([]);
   const [hasMore, setHasMore] = React.useState(true);
-  const [sortType, setStortType] = React.useState<SortType>("asc");
+  const [sortTypeProfit, setSortTypeProfit] = React.useState<sortTypeProfit>("asc");
+  const [sortTypeHour, setSortTypeHour] = React.useState<sortTypeHour>("asc");
 
   const updateRecipes = () =>
     getRecipes(recipes.length).then(result => {
@@ -66,16 +68,31 @@ const ContentTable = () => {
   }, []);
 
   React.useEffect(() => {
-    setRecipes(sortRecipes(recipes));
-  }, [sortType]);
+    setRecipes(sortRecipesByProfit(recipes));
+  }, [sortTypeProfit]);
 
-  const sortRecipes = (recipeElements: Recipe[]) => {
-    switch (sortType) {
+  React.useEffect(() => {
+    setRecipes(sortRecipesByHour(recipes));
+  }, [sortTypeHour]);
+
+  const sortRecipesByProfit = (recipeElements: Recipe[]) => {
+    switch (sortTypeProfit) {
       case "asc":
         recipeElements.sort((a, b) => b.profit - a.profit);
         return recipeElements;
       case "desc":
         recipeElements.sort((a, b) => a.profit - b.profit);
+        return recipeElements;
+    }
+  };
+
+  const sortRecipesByHour = (recipeElements: Recipe[]) => {
+    switch (sortTypeHour) {
+      case "asc":
+        recipeElements.sort((a, b) => Math.round(b.time.getHourFactor() * b.profit) - Math.round(a.time.getHourFactor() * a.profit));
+        return recipeElements;
+      case "desc":
+        recipeElements.sort((a, b) => Math.round(a.time.getHourFactor() * a.profit) - Math.round(b.time.getHourFactor() * b.profit));
         return recipeElements;
     }
   };
@@ -101,19 +118,34 @@ const ContentTable = () => {
     ));
   };
 
-  const handleSortChange = () => {
-    switch (sortType) {
+  const handleSortChangeProfit = () => {
+    switch (sortTypeProfit) {
       case "asc":
-        setStortType("desc");
+        setSortTypeProfit("desc");
         break;
       case "desc":
-        setStortType("asc");
+        setSortTypeProfit("asc");
         break;
     }
   };
 
-  const sorter = () => {
-    return <span onClick={handleSortChange}>{sortIcon[sortType]}</span>;
+  const handleSortChangeHour = () => {
+    switch (sortTypeHour) {
+      case "asc":
+        setSortTypeHour("desc");
+        break;
+      case "desc":
+        setSortTypeHour("asc");
+        break;
+    }
+  };
+
+  const sorterByProfit = () => {
+    return <span onClick={handleSortChangeProfit}>{sortIcon[sortTypeProfit]}</span>;
+  };
+
+  const sorterByHour = () => {
+    return <span onClick={handleSortChangeHour}>{sortIcon[sortTypeHour]}</span>;
   };
 
   return (
@@ -129,8 +161,8 @@ const ContentTable = () => {
           <Table.Head.Item>Facility</Table.Head.Item>
           <Table.Head.Item>Level</Table.Head.Item>
           <Table.Head.Item>Process</Table.Head.Item>
-          <Table.Head.Item>Profit {sorter()}</Table.Head.Item>
-          <Table.Head.Item>Profit / H</Table.Head.Item>
+          <Table.Head.Item>Profit {sorterByProfit()}</Table.Head.Item>
+          <Table.Head.Item>Profit / H {sorterByHour()}</Table.Head.Item>
         </Table.Head>
         <Table.Body key="table_body">{...renderRecipes(recipes)}</Table.Body>
       </Table>
